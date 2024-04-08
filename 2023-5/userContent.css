@@ -1,0 +1,126 @@
+@-moz-document url-prefix() {
+
+    * {
+        scrollbar-color: rgba(57, 197, 187) rgba(57, 197, 187, 0.05) !important;
+    }
+}
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing){
+
+.top-site-button .title,
+.context-menu-button {
+    color: #fff !important;
+    text-shadow: 2px 2px 2px #222 !important;
+}
+
+body {
+    --newtab-topsites-outer-card-hover: rgba(255, 255, 255, 0.4) !important;
+    --newtab-element-hover-color: rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+body:hover::before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:
+        url(frontpage.jpg) 72% 50% / contain,
+        url(texture.png) 50% 50% / cover,
+        url(background.jpg) 50% 50% / cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+body:hover::after {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: no-repeat center;
+    background-image: url(Uma\ Musume\ -\ Pretty\ Derby\ -\ Road\ to\ the\ Top.webp);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+body:not(:hover)::before {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:
+        url(slogan.png) 10% 90% / 24px,
+        url(logo_4.png) 81% 97% / 220px,
+        url(logo_3.png) 96% 2.2% / 114px,
+        url(logo_2.png) 6% 1.8% / 186px,
+        url(logo_1.png) 37.8% 50% / contain,
+        url(frontpage.jpg) 72% 50% / contain,
+        url(2.png) 3.2% 48% / 113px,
+        url(10.png) 12% 29% / 113px,
+        url(14.png) 26% 7% / 113px,
+        url(5.png) 28% 69% / 113px,
+        url(4.png) 34% 84% / 113px,
+        url(1.png) 18% 100% / 113px,
+        url(line_2.jpg) 9.7% 100% / 10px 749px,
+        url(line_1.jpg) 50% 5% / 1920px 10px,
+        url(texture.png) 50% 50% / cover,
+        url(background.jpg) 50% 50% / cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+body:not(:hover)::after {
+    content: "";
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: no-repeat center;
+    background-image: url(Uma\ Musume\ -\ Pretty\ Derby\ -\ Road\ to\ the\ Top.webp);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-inner-wrapper {
+    display: none !important;
+}
+
+.icon.icon-pin-small {
+    display: none !important;
+}
+
+.top-site-button {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.top-site-button:hover {
+    opacity: 0.9;
+}
+
+.logo,
+.wordmark {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo:hover,
+.wordmark:hover {
+    opacity: 1.0;
+}
+}
